@@ -1,0 +1,253 @@
+.a{
+  margin-top: 9%;
+}
+.about {
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 80%;
+  margin: auto;
+}
+.about p{
+  text-align: center;
+}
+.about {
+  min-height: 150vh; /* Ensure enough scroll space */
+}
+/* Profile Image */
+.profile-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 6%;
+}
+
+.profile-pic {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* About Text */
+.about-text {
+  margin-bottom: 10%;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 3%;
+}
+
+.about-text p {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Education Section */
+.education-section {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.education-section h2 {
+  font-size: 1.8rem;
+  color: #007bff;
+  text-align: center;
+  margin-bottom: 3%;
+}
+
+.education-card {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3%;
+  text-align: center;
+}
+
+.education-card h3 {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.education-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.technical-skills {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.technical-skills h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #007bff;
+}
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10%;
+}
+
+.skill-card {
+  flex: 1 1 calc(33.33% - 15px); /* 3 cards per row */
+  max-width: 280px;
+  background: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 15px;
+}
+.footer-bottom p{
+  color: rgb(122, 120, 120);
+  font-size: 14px;
+  font-weight: 400;
+}
+/* Making the icon smaller */
+.skill-logo {
+  width: 30px;  /* Smaller icon size */
+  height: 30px;
+}
+
+/* Experience Section Styles */
+.experience-section {
+  padding: 60px 10%;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.experience-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color:#007bff;
+  font-weight: bold;
+}
+
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.experience-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+}
+
+.experience-card h3 {
+  font-size: 1.5rem;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.experience-card h4 {
+  font-size: 1.2rem;
+  color: #555;
+  font-weight: normal;
+}
+
+.experience-duration {
+  font-size: 1rem;
+  color: #777;
+  margin: 5px 0;
+}
+
+.experience-card p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.experience-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.skill-badge {
+  background: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.skill-badge:hover {
+  background: #0056b3;
+}
+
+.hobbies-section {
+  text-align: center;
+  padding: 2rem 0;
+}
+.hobbies-title{
+  margin: 3%;
+}
+.hobbies-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.hobby-card {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hobby-card:hover {
+  transform: scale(1.05);
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .skill-card {
+    flex: 1 1 calc(50% - 15px); /* 2 per row on smaller screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .skill-card {
+    flex: 1 1 100%; /* 1 per row on mobile */
+  }
+}

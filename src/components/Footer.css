@@ -1,0 +1,127 @@
+/* Footer Container */
+.footer {
+  background: linear-gradient(135deg, #1e1e1e, #292929);
+  color: white;
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Layout */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Footer Sections */
+.footer-section {
+  flex: 1;
+  margin: 10px;
+  min-width: 250px;
+  text-align: left;
+}
+
+.footer-section h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color:white; /* Updated */
+}
+
+/* Links */
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 8px 0;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #48CFCB; /* Updated */
+  text-decoration: underline;
+}
+
+/* Contact Details */
+.footer-section p {
+  margin: 5px 0;
+  font-size: 15px;
+  color: #ddd;
+}
+
+/* Social Media */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease-in-out;
+  font-size: 16px;
+}
+
+.social-links a:hover {
+  transform: translateX(5px);
+  color: #48CFCB; /* Updated */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  padding-top: 15px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-section {
+    margin-bottom: 20px;
+  }
+
+  .social-links {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 30px 15px;
+  }
+
+  .footer-section h2 {
+    font-size: 18px;
+  }
+
+  .footer-section ul li {
+    font-size: 14px;
+  }
+
+  .social-links a {
+    font-size: 14px;
+  }
+}
