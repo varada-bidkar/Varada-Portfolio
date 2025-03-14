@@ -8,6 +8,14 @@ const Container = () => {
   const location = useLocation();
   const active = location.pathname;
 
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
+  const navLinks = [
+    { path: "/", label: "Home" },
+    { path: "/about", label: "About" },
+    { path: "/projects", label: "Projects" },
+  ];
+
   return (
     <header className="container">
       {/* Left - Logo */}
@@ -16,36 +24,52 @@ const Container = () => {
         <h1>Varada Bidkar</h1>
       </div>
 
-      {/* Mobile Menu Icon */}
-      <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
-        {menuOpen ? <FaTimes /> : <FaBars />}
-      </div>
+    
 
       {/* Navigation */}
-      <nav className={menuOpen ? "nav-menu open" : "nav-menu"}>
+      <nav className={`nav-menu ${menuOpen ? "open" : ""}`}>
         <ul>
-          <li><Link to="/" className={active === "/" ? "active" : ""}>Home</Link></li>
-          <li><Link to="/about" className={active === "/about" ? "active" : ""}>About</Link></li>
-          <li><Link to="/projects" className={active === "/projects" ? "active" : ""}>Projects</Link></li>
+          {navLinks.map(({ path, label }) => (
+            <li key={path}>
+              <Link 
+                to={path} 
+                className={active === path ? "active" : ""} 
+                onClick={() => setMenuOpen(false)}
+              >
+                {label}
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
 
       {/* Right - Social Media & Resume */}
-      <div className="i">
+      <div className="social-and-resume">
         <div className="social-icons">
-          <a href="https://github.com/varada-bidkar" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/varada-bidkar" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <FaGithub />
           </a>
-          <a href="https://www.linkedin.com/in/varada-b-558836257/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/varada-b-558836257/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <FaLinkedin />
           </a>
         </div>
         <div className="resume">
-          <a href="https://drive.google.com/file/d/1nbX45gzkih26rCyBOrOcEFG6znx2Hcig/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+          <a 
+            href="https://drive.google.com/file/d/1nbX45gzkih26rCyBOrOcEFG6znx2Hcig/view?usp=sharing" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            aria-label="Resume"
+          >
             📄 Resume
           </a>
         </div>
+        
       </div>
+      
+        {/* Mobile Menu Icon */}
+        <button className="menu-icon" onClick={toggleMenu} aria-label="Toggle navigation">
+        {menuOpen ? <FaTimes /> : <FaBars />}
+      </button>
     </header>
   );
 };

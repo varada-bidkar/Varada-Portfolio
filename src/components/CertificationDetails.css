@@ -1,0 +1,84 @@
+/* General Styles */
+.certification-details {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.certification-details:hover {
+  transform: scale(1.02);
+}
+
+/* Image Styling */
+.cert-image {
+  width: 100%;
+  height: 400px; /* Ensures image is tall */
+  object-fit: cover; /* Maintains aspect ratio while filling space */
+  border-radius: 8px;
+  display: block;
+  margin: 20px auto;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Text Styling */
+.certification-details h2 {
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.certification-details p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.certification-details h3 {
+  font-size: 22px;
+  color: #444;
+  margin-top: 20px;
+  text-decoration: underline;
+}
+
+/* List Styling */
+.certification-details ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.certification-details li {
+  font-size: 16px;
+  background: #f4f4f4;
+  padding: 10px;
+  margin: 8px 0;
+  border-left: 5px solid #007bff;
+  transition: background 0.3s;
+}
+
+.certification-details li:hover {
+  background: #e0e0e0;
+}
+
+/* Back Button */
+.certification-details .back-button {
+  background: linear-gradient(to right, #007bff, #00b4db);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 8px;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.certification-details .back-button:hover {
+  background: linear-gradient(to right, #0056b3, #0094c6);
+  transform: scale(1.05);
+}

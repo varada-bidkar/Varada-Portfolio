@@ -7,32 +7,19 @@ body {
   padding: 0;
 }
 
-/* Header */
-.header {
-  background: white;
-  color: #121212;
-  padding: 15px 20px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  position: relative;
-  border-bottom: 2px solid #ccc;
-}
-
-
-
 /* Header Container */
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
+  width: 100%;
+  padding: 15px 80px;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  z-index: 1000; /* Ensures it stays above other content */
-  padding: 20px 80px;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
   background-color: #FFFFFF;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
 /* Logo */
@@ -43,64 +30,81 @@ body {
   font-weight: bold;
   color: black;
 }
+
 .logo h1 {
   font-size: 20px;
-  color:black;
+  margin-left: 10px;
+  color: black;
 }
 
-.logo img {
-  width: 50px;
-  height: 50px;
-}
 .logo .code-icon {
-  margin-right: 10px;
   font-size: 2rem;
   color: black;
 }
+
 /* Navigation */
-nav ul {
+.nav-menu {
+  display: flex;
+}
+
+.nav-menu ul {
   list-style: none;
   display: flex;
   gap: 25px;
-  padding: 10px 30px;  /* Adjusted padding for better proportions */
+  padding: 10px 30px;
   border: 2px solid whitesmoke;
-  border-radius: 50px;  /* Creates a rounded pill shape */
-  background: white; /* Slightly transparent whitesmoke background */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adds subtle elevation */
+  border-radius: 50px;
+  background: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
-nav ul li {
+.nav-menu ul li {
   display: inline;
 }
 
-
-
-nav ul li a {
+.nav-menu ul li a {
   text-decoration: none;
   font-weight: bold;
-  padding: 5px 9px;
+  padding: 8px 12px;
   transition: 0.3s;
   border-radius: 50px;
-  color: black; /* Default text color */
-  background: none; /* Ensure no unwanted background */
-}
-
-nav ul li a:hover {
-  background: linear-gradient(90deg, #2563eb, #9333ea);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: black;
 }
 
 
-nav ul li a.active {
+.nav-menu ul li a.active {
   background: linear-gradient(90deg, #2563eb, #9333ea);
   color: white;
   font-weight: bold;
 }
+  
+/* Social Media & Resume */
+.i {
+  display: flex;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.social-icons a {
+  color: #000000;
+  font-size: 1.8rem;
+  margin: 0 10px;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  color: #00a2ff;
+  transform: scale(1.2);
+}
+
 .resume a {
   display: inline-block;
-  padding: 5px 20px;
+  padding: 6px 20px;
   font-size: 16px;
   font-weight: bold;
   text-decoration: none;
@@ -109,37 +113,66 @@ nav ul li a.active {
   border-radius: 50px;
   transition: all 0.3s ease;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  margin-left: 10px;
 }
 
 .resume a:hover {
-  background: linear-gradient(90deg, #9333ea,#2563eb);
+  background: linear-gradient(90deg, #9333ea, #2563eb);
   transform: translateY(-2px);
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
 }
-.i {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+
+/* Mobile Menu Icon */
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  border: none;
+  color: black;
+  background-color: transparent;
 }
 
-/* Social Icons */
-.social-icons{
-  display: flex;
-  align-items: end;
-  justify-content:end;
-  margin-top: 5px;
-}
-.social-icons a {
-  
-  color: #000000;/* Default icon color */
-  font-size: 1.8rem;
-  margin: 0 10px;
-  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 15px 30px;
+  }
 }
 
-.social-icons a:hover {
-  color: #00a2ff; /* Change this to any color you want */
-  transform: scale(1.2); /* Slightly enlarge the icon on hover */
+@media screen and (max-width: 768px) {
+  /* Show menu icon */
+  .menu-icon {
+    display: block;
+  }
+
+  /* Hide nav-menu by default */
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+  .nav-menu li link{
+    color: #00a2ff;
+  }
+
+  /* Show nav-menu when .open class is added */
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .nav-menu ul li {
+    margin: 15px 0;
+  }
 }

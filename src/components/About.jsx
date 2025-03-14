@@ -69,43 +69,7 @@ const About = () => {
     ],
   };
 
-  useEffect(() => {
-    gsap.fromTo(
-      sectionRef.current,
-      { opacity: 0, y: 50 },
-      { opacity: 1, y: 0, duration: 1.2, ease: "power2.out" }
-    );
-
-    categoriesRef.current.forEach((el, index) => {
-      gsap.fromTo(
-        el,
-        { opacity: 0, scale: 0.8 },
-        {
-          opacity: 1,
-          scale: 1,
-          duration: 1,
-          delay: index * 0.3,
-          ease: "elastic.out(1, 0.5)",
-        }
-      );
-    });
-  }, []);
-
-  useGSAP(() => {
-    gsap.from(".about-text, .education-card, .skill-card", {
-      scrollTrigger: {
-        trigger: ".about",
-        start: "top 85%",
-        toggleActions: "play none none none",
-      },
-      opacity: 0,
-      y: 50,
-      stagger: 0.2,
-      duration: 0.8,
-      ease: "power3.out",
-    });
-  }, []);
-
+  
 
 
   const experiences = [
@@ -131,87 +95,7 @@ const About = () => {
     // Add other experiences here if needed
   ];
 
-  useEffect(() => {
-    gsap.fromTo(
-      sectionRef.current,
-      { opacity: 0, y: 50 },
-      { opacity: 1, y: 0, duration: 1.2, ease: "power2.out" }
-    );
-
-    experienceRef.current.forEach((el, index) => {
-      gsap.fromTo(
-        el,
-        { opacity: 0, x: -50 },
-        {
-          opacity: 1,
-          x: 0,
-          duration: 1,
-          delay: index * 0.3,
-          ease: "power2.out",
-        }
-      );
-    });
-  }, []);
-
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-  
-    // Animate "About Me" Text
-    gsap.from(".about-text", {
-      scrollTrigger: {
-        trigger: ".about-text",
-        start: "top 0%",
-        toggleActions: "play none none none",
-      },
-      opacity: 0,
-      y: 50,
-      duration: 1,
-      ease: "power2.out",
-    });
-  
-    // Animate Education Cards
-    gsap.from(".education-card", {
-      scrollTrigger: {
-        trigger: ".education-section",
-        start: "bottom 65%",
-        toggleActions: "play none none none",
-      },
-      opacity: 0,
-      y: 50,
-      stagger: 0.2,
-      duration: 1,
-      ease: "power2.out",
-    });
-  
-    // Animate Skills Section
-    gsap.from(".skills-category", {
-      scrollTrigger: {
-        trigger: ".technical-skills",
-        start: "bottom 65%",
-        toggleActions: "play none none none",
-      },
-      opacity: 0,
-      scale: 0.9,
-      stagger: 0.2,
-      duration: 1,
-      ease: "elastic.out(1, 0.5)",
-    });
-  
-    // Animate Experience Cards
-    gsap.from(".experience-card", {
-      scrollTrigger: {
-        trigger: ".experience-section",
-        start: "bottom 55%",
-        toggleActions: "play none none none",
-      },
-      opacity: 0,
-      x: -50,
-      stagger: 0.3,
-      duration: 0.6,
-      ease: "power2.out",
-    });
-  }, []);
-  
+ 
   return (
     <>
       <Container />
