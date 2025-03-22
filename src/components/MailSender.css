@@ -1,5 +1,5 @@
 .mail-section {
-  height: 300px;
+  height: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,6 +15,22 @@
   transition: 0.3s ease-in-out;
 }
 
+/* Responsive: Adjust layout for mobile */
+@media (max-width: 768px) {
+  .mail-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .mail-text {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}
+
+/* Mail Text */
 .mail-text {
   text-align: left;
   font-size: 2.5rem;
@@ -22,6 +38,14 @@
   color: #333;
 }
 
+/* Responsive: Adjust font size for smaller screens */
+@media (max-width: 480px) {
+  .mail-text {
+    font-size: 1.8rem;
+  }
+}
+
+/* Mail Button */
 .mail-button {
   display: flex;
   align-items: center;
@@ -35,22 +59,23 @@
   transition: 0.3s ease-in-out;
 }
 
+/* Adjust button padding for better tap area */
+@media (max-width: 480px) {
+  .mail-button {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+  }
+}
+
+/* Hover Effect */
 .mail-button:hover {
   background: linear-gradient(90deg, #9333ea, #2563eb);
   transform: scale(1.05);
 }
 
+/* Icon Margin */
 .mail-icon {
   margin-right: 8px;
-}
-
-@media (max-width: 768px) {
-  .mail-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .mail-text {
-    margin-bottom: 10px;
-  }
+  height: 12%;
+  width: 12%;
 }
