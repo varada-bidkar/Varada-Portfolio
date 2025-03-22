@@ -12,8 +12,8 @@ const Footer = () => {
           <ul>
            <li> <a href="https://varada-portfolio-y93b.vercel.app/">Home</a></li>
 <li>  <a href="https://varada-portfolio-y93b.vercel.app/about">About</a></li>
-<li><a href="https://yourwebsite.com/certifications">Certifications</a></li>
-<li><a href="https://varada-portfolio-y93b.vercel.app/certifications">Projects</a></li>
+<li><a href="https://varada-portfolio-y93b.vercel.app/certifications">Certifications</a></li>
+<li><a href="https://varada-portfolio-y93b.vercel.app/projects">Projects</a></li>
 
 </ul>
         </div>
