@@ -69,15 +69,21 @@ body {
   transition: 0.3s;
   border-radius: 50px;
   color: black;
+  background-clip: text;
 }
 
+.nav-menu ul li a:hover {
+  background: linear-gradient(90deg, #2563eb, #9333ea);
+  background-clip: text;
+}
 
+/* Active Link */
 .nav-menu ul li a.active {
   background: linear-gradient(90deg, #2563eb, #9333ea);
   color: white;
   font-weight: bold;
 }
-  
+
 /* Social Media & Resume */
 .i {
   display: flex;
@@ -132,12 +138,15 @@ body {
 }
 
 /* Responsive Design */
+
+/* Tablet (≤ 1024px) */
 @media screen and (max-width: 1024px) {
   .container {
     padding: 15px 30px;
   }
 }
 
+/* Mobile (≤ 768px) */
 @media screen and (max-width: 768px) {
   /* Show menu icon */
   .menu-icon {
@@ -148,7 +157,7 @@ body {
   .nav-menu {
     display: none;
     position: absolute;
-    top: 60px;
+    top: 70px;
     left: 0;
     width: 100%;
     background: white;
@@ -157,9 +166,6 @@ body {
     padding: 20px 0;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
-  }
-  .nav-menu li link{
-    color: #00a2ff;
   }
 
   /* Show nav-menu when .open class is added */
@@ -174,5 +180,46 @@ body {
 
   .nav-menu ul li {
     margin: 15px 0;
+  }
+
+ 
+
+  .resume {
+    margin-top: 10px;
+  }
+}
+
+/* Small Mobile (≤ 480px) */
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 10px 15px;
+    max-width: 480px;
+  }
+
+  .logo h1 {
+    font-size: 18px;
+  }
+
+  .menu-icon {
+    font-size: 1.8rem;
+  }
+
+  .nav-menu {
+    top: 60px;
+    padding: 15px 0;
+  }
+
+  .nav-menu ul li {
+    margin: 10px 0;
+  }
+
+  .nav-menu ul li a {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .resume a {
+    font-size: 14px;
+    padding: 8px 16px;
   }
 }
