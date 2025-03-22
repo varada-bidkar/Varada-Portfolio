@@ -380,7 +380,7 @@
 /* Footer Adjustments */
 @media (max-width: 768px) {
   .footer-bottom p {
-    margin-top: 9%;
+    margin-top: 15%;
     font-size: 12px;
   }
 }
