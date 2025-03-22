@@ -11,9 +11,9 @@ const Footer = () => {
           <h2>🔗 Important Links</h2>
           <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/About">About</a></li>
-            <li><a href="/Certifications">Certifications</a></li>
-            <li><a href="/Projects">Projects</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/certifications">Certifications</a></li>
+            <li><a href="/projects">Projects</a></li>
           </ul>
         </div>
 
