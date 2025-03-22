@@ -10,11 +10,11 @@ const Footer = () => {
           {/* Important Links */}
           <h2>🔗 Important Links</h2>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/certifications">Certifications</a></li>
-            <li><a href="/projects">Projects</a></li>
-          </ul>
+  <li><Link to="/">Home</Link></li>
+  <li><Link to="/about">About</Link></li>
+  <li><Link to="/certifications">Certifications</Link></li>
+  <li><Link to="/projects">Projects</Link></li>
+</ul>
         </div>
 
         {/* Contact */}
