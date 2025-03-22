@@ -19,21 +19,7 @@ body {
 
 
 
-/* Header Container */
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000; /* Ensures it stays above other content */
-  padding: 20px 80px;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-}
+
 
 /* Logo */
 .logo {
@@ -215,6 +201,7 @@ nav ul li a.active {
     justify-content: space-between; 
     flex-wrap: wrap; /* Allows elements to wrap if necessary */
     text-align: left;
+    max-width: 350px;
   }
 
   nav ul {
@@ -317,5 +304,147 @@ nav ul li a.active {
 
   nav ul li a:hover {
     background: rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .skill-card {
+    flex: 1 1 calc(50% - 15px); /* 2 per row on smaller screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .skill-card {
+    flex: 1 1 100%; /* 1 per row on mobile */
+  }
+}
+/* Adjust section padding and text alignment */
+@media (max-width: 768px) {
+  .mail-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    height: auto; /* Adjust height for small screens */
+    text-align: center;
+  }
+
+  .mail-text {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .mail-button {
+    font-size: 0.9rem;
+    padding: 10px 14px;
+  }
+}
+
+/* About section responsiveness */
+@media (max-width: 768px) {
+  .about {
+    padding: 40px 15px;
+    max-width: 90%;
+  }
+
+  .profile-pic {
+    width: 180px;
+    height: 180px;
+    margin-top: 20%;
+  }
+
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Adjust Education section */
+@media (max-width: 768px) {
+  .education-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .education-card {
+    padding: 12px;
+  }
+
+  .education-card h3 {
+    font-size: 1rem;
+  }
+
+  .education-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsive skill grid */
+@media (max-width: 768px) {
+  .skills-grid {
+    gap: 10px;
+  }
+
+  .skill-card {
+    flex: 1 1 calc(50% - 10px); /* 2 per row on medium screens */
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-card {
+    flex: 1 1 100%; /* 1 per row on small screens */
+    max-width: 100%;
+  }
+
+  .skill-logo {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* Experience section adjustments */
+@media (max-width: 768px) {
+  .experience-section {
+    padding: 40px 5%;
+  }
+
+  .experience-card {
+    padding: 15px;
+  }
+
+  .experience-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .experience-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Hobbies Section Responsiveness */
+@media (max-width: 768px) {
+  .hobbies-container {
+    gap: 1rem;
+  }
+
+  .hobby-card {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hobby-card {
+    max-width: 100%;
+  }
+}
+
+/* Footer Adjustments */
+@media (max-width: 768px) {
+  .footer-bottom p {
+    font-size: 12px;
   }
 }
