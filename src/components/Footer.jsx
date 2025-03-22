@@ -10,10 +10,11 @@ const Footer = () => {
           {/* Important Links */}
           <h2>🔗 Important Links</h2>
           <ul>
-  <li><Link to="/">Home</Link></li>
-  <li><Link to="/about">About</Link></li>
-  <li><Link to="/certifications">Certifications</Link></li>
-  <li><Link to="/projects">Projects</Link></li>
+            <a href="https://varada-portfolio-y93b.vercel.app/">Home</a>
+  <a href="https://varada-portfolio-y93b.vercel.app/about">About</a>
+<a href="https://yourwebsite.com/certifications">Certifications</a>
+<a href="https://varada-portfolio-y93b.vercel.app/certifications">Projects</a>
+
 </ul>
         </div>
 
